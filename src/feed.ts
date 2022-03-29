@@ -29,11 +29,13 @@ export class FarcasterFeed {
    * Checks to make sure cast hasn't already been casted
    */
   public castPosts = async () => {
-    const casts = []
-    for await (const activity of this.farcasterClient.getAllActivityForUser(this.username)) {
-        casts.push(activity.body.data.text);
+    const casts = [];
+    for await (const activity of this.farcasterClient.getAllActivityForUser(
+      this.username
+    )) {
+      casts.push(activity.body.data.text);
     }
-    for (let post of this.posts) {      
+    for (let post of this.posts) {
       let newCast = post.title;
       if (post.url) {
         newCast = `${newCast} ${post.url}`;
@@ -41,8 +43,8 @@ export class FarcasterFeed {
       let alreadyCasted = false;
       for (let cast of casts) {
         if (newCast === cast) {
-            alreadyCasted = true;
-            break;
+          alreadyCasted = true;
+          break;
         }
       }
       if (!alreadyCasted) {
