@@ -1,6 +1,6 @@
 {
   "name": "farcaster-feed",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Farcaster-Feed is a Farcaster protocol syndication library for Node.js",
   "scripts": {
     "build": "tsc --outDir dist",
