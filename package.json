@@ -15,7 +15,7 @@
     "syndication",
     "feed"
   ],
-  "main": "dist/feed.js",
+  "main": "dist/feed.d.ts",
   "author": "Charlie Harrington",
   "license": "MIT",
   "homepage": "https://github.com/whatrocks/farcaster-feed#readme",

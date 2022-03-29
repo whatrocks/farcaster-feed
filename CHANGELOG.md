@@ -1,3 +1,9 @@
+## 0.2.2
+
+### Bug fix
+
+* Emit declarations file
+
 ## 0.2.1
 
 ### Bug fix
