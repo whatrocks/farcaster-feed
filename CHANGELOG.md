@@ -1,8 +1,8 @@
 ## 0.2.1
 
-### Feature
+### Bug fix
 
-* Cast new posts to a user's Farcaster feed
+* Add "main" entrypoint to package.json
 
 ## 0.2.0
 
