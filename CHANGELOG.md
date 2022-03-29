@@ -1,3 +1,9 @@
+## 0.2.5
+
+### Refactor
+
+* remove "addPost" API
+
 ## 0.2.4
 
 ### Bug fix

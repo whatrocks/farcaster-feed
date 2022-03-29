@@ -18,7 +18,7 @@ npm install --save farcaster-feed
 You will need a Farcaster username (and its corresponding [private key](https://farcasterxyz.notion.site/Find-your-Farcaster-private-key-c409a0c2b036467d8f5172ff8df3bc9d)).
 
 ```javascript
-import { FarcasterFeed, Post } from "farcaster-feed";
+import { FarcasterFeed } from "farcaster-feed";
 
 const username = "whatrocks";
 const privateKey = "FOO";
@@ -34,15 +34,9 @@ const blogPosts = [
         url: "https://charlieharrington.com",
         otherContent: "interesting stuff, ignored for now!", 
     }
-]
-for (let blogPost of blogPosts) {
-    const post: Post = {
-        title: blogPost.title,
-        url: blogPost.url
-    };
-    farcaster.addPost(post);
-}
-farcaster.castPosts();
+];
+const casts = blogPosts.map(({title, url, ...rest}) => ({ title, url }));
+farcaster.castPosts(casts);
 ```
 
 
