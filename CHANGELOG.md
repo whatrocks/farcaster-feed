@@ -1,3 +1,9 @@
+## 0.2.4
+
+### Bug fix
+
+* change "main" entrypoint
+
 ## 0.2.3
 
 ### Bug fix
