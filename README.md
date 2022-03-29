@@ -1,4 +1,8 @@
 # farcaster-feed
+
+![NPM](https://img.shields.io/npm/l/farcaster-feed?no-cache)
+![NPM](https://img.shields.io/npm/v/farcaster-feed?no-cache)
+
 Farcaster-feed is a [Farcaster](https://farcaster.xyz) protocol syndication tool for Node.js. 
 
 The library will cast "new" items for a given Farcaster user. The intended use case is with static site generators - similar to RSS feed generation, this library will auto-cast new posts.
