@@ -1,3 +1,9 @@
+## 0.2.3
+
+### Bug fix
+
+* set `esModuleInterop` to true
+
 ## 0.2.2
 
 ### Bug fix
