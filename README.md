@@ -21,8 +21,8 @@ You will need a Farcaster username (and its corresponding [private key](https://
 import { FarcasterFeed } from "farcaster-feed";
 
 const username = "whatrocks";
-const privateKey = "FOO";
-const farcaster = new FarcasterFeed(username, privateKey);
+const mnemonic = "words words wordzzz";
+const farcaster = new FarcasterFeed(username, mnemonic);
 const blogPosts = [
     {
         title: "Example.com",
@@ -39,4 +39,9 @@ const casts = blogPosts.map(({title, url, ...rest}) => ({ title, url }));
 farcaster.castPosts(casts);
 ```
 
+## Update NPM
 
+```
+npm version
+npm publish
+```
