@@ -40,3 +40,8 @@ farcaster.castPosts(casts);
 ```
 
 ## Update NPM
+
+```
+npm version
+npm publish
+```
