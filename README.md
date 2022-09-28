@@ -43,5 +43,6 @@ farcaster.castPosts(casts);
 
 ```
 npm version
+git push —-tags origin main
 npm publish
 ```
