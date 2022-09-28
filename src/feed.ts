@@ -1,18 +1,22 @@
 import { publishCast, Farcaster } from "@standard-crypto/farcaster-js";
+import { AlchemyProvider } from "@ethersproject/providers";
+import { Wallet } from "ethers";
 import { Post } from "./typings";
 
 /**
  * Class used to syndicate Casts
  */
 export class FarcasterFeed {
+  provider: AlchemyProvider;
   farcasterClient: Farcaster;
+  wallet: Wallet;
   username: string;
-  privateKey: string;
 
-  constructor(username: string, privateKey: string) {
-    this.farcasterClient = new Farcaster();
+  constructor(username: string, mnemonic: string) {
+    this.provider = new AlchemyProvider("goerli");
+    this.farcasterClient = new Farcaster(this.provider);
+    this.wallet = Wallet.fromMnemonic(mnemonic);
     this.username = username;
-    this.privateKey = privateKey;
   }
 
   /**
@@ -39,7 +43,11 @@ export class FarcasterFeed {
         }
       }
       if (!alreadyCasted) {
-        const published = await publishCast(this.privateKey, newCast);
+        const published = await publishCast(
+          this.wallet,
+          this.provider,
+          newCast
+        );
       }
     }
   };
